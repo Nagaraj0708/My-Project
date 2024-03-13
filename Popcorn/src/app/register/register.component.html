@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="background">
+<section class="register-block">
+<div class="container">
+    <div class="row ">
+    <div class="col register-sec">
+    <div class="text-center mt-3">
+        <h3> Register Your Account  </h3>
+        <br>    
+        <form
+                class="register-form"
+            action=""
+            #f="ngForm"
+            novalidate
+            (ngSubmit)="f.form.valid&&onSubmit()"
+            >
+        <div class="form-group">
+            <label for="first-name">  First Name :  </label>
+            <input type="text" id="first-name" name="first-name" [(ngModel)]="formData.FirstName" #FirstName="ngModel" required style="border-left-color: brown; border-top-style: ridge ;width: 25%;padding: 7px;" >
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&FirstName.errors?.['required']" >
+            First Name is required.
+        </span>
+        <div class="form-group">
+            <label for="last-name">  Last Name :  </label>
+            <input type="text" id="last-name" name="last-name"   [(ngModel)]="formData.LastName" #LastName="ngModel" required style="border-left-color: brown;border-top-style: ridge ;width: 25%;padding: 7px;" >
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&LastName.errors?.['required']" >
+            Last Name is required.
+        </span>
+        <div class="form-group">
+            <label for="date">Date Of Birth :</label>
+            <input type="date" id="date" name="date" [(ngModel)]="formData.date" #date="ngModel" required style="border-left-color: brown;border-top-style: ridge ;width: 25%;padding: 7px;">
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&date.errors?.['required']" >
+            Date of Birth is required.
+        </span>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" [(ngModel)]="formData.email" #email="ngModel" required  style="border-left-color: brown;border-top-style: ridge ;width: 25%;padding: 7px;">
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&email.errors?.['required']" >
+            Email is required.
+        </span>
+        <div class="form-group">
+            <label for="phone">Mobile No :</label>
+            <input type="tel" id="" name="phone" [(ngModel)]="formData.phone" #phone="ngModel" required style="border-left-color: brown;border-top-style: ridge ;width: 25%;padding: 7px;" >
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&phone.errors?.['required']" >
+            Mobile No is required.
+        </span>
+        <div class="form-group">
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password" [(ngModel)]="formData.password" #password="ngModel" required minlength="8" style="border-left-color: brown;border-top-style: ridge ;width: 25%;padding: 7px;" >
+        </div>
+        <span class="text-danger" *ngIf="this.submit&&password.errors?.['required']" >
+            Password is required.
+        </span>
+        <span class="text-danger"  *ngIf="this.submit&&password.errors?.['minlength']">
+            Minimum length of password is 8 characters
+        </span>     
+        <div class="form-group">
+            <button type="submit"  (click)="submit=true"  >Register</button>
+        </div>
+          <h6> Already an existing user <a href="login">login</a> here </h6>
+        </form>
+    </div>
+    </div></div>
+</div>
+</section>
+</div>

@@ -1,0 +1,116 @@
+.overall{
+    padding-top: 0%;
+    padding-right: 55%;
+    font-size: larger;
+    text-transform: uppercase;
+}
+.header{
+    padding: 5px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 10%;
+    border-style: ridge;
+    background:url(src\assets\images\variety.png)center/cover no-repeat;
+    text-shadow: 2px 2px 4px rgba(240, 226, 226, 0.2)
+}
+.header1{
+    padding: 5px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 10%; 
+    border-style: ridge;
+    background:url(src\assets\images\toppings.webp)center/cover no-repeat;
+}
+h4{
+    font-weight: 700;
+}
+.row-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0.3%;
+    padding-top: 1%;
+    padding-left: 0;
+    
+}
+
+.item {
+    flex: 1;
+    padding: 0.4%;
+    margin: 0px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: flex-start; 
+    padding-top: 10px;
+    
+}
+
+.image-row img {
+    margin-left: 110px;
+
+}
+.item1 {
+    flex: 1;
+    padding-left: 3%;
+    margin: 0px;
+}
+.item2 {
+    flex: 1;
+    padding-left: 5%;
+    margin: 0px;
+}
+.item3 {
+    flex: 1;
+    padding: 0px;
+
+}
+.item4 {
+    flex: 1;
+    padding: 0px;
+    margin-right: 5%;
+}
+
+button{
+    border-style: ridge;
+    border-radius: 20%;
+    background-attachment: fixed;
+    background-blend-mode: overlay ;
+    width: 30px;
+    height: 30px;
+}
+
+
+.proceed-btn{
+    margin-left: 165%;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    width: 25%;
+    font-weight: 500;
+
+}
+ .proceed-btn .badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  border-color: white;
+  border-radius: 30px;
+  padding: 3px 6px;
+  font-size: 10px;
+  position: absolute;
+  margin-right: 5%;
+  
+
+} 
+
+.proceed-btn:hover {
+    background-color: #45a049; 
+  }
+.section1{
+    background-image: url(https://i.pinimg.com/originals/68/dc/2b/68dc2b5236b3c57c6a18e44a0cb80f0c.png);
+}
+

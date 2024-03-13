@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="background">
+<section class="login-block">
+<div class="container">
+    <div class="col login-sec">
+    <div class="text-center mt-5"><br><br>
+        <h2 > Login </h2><br><br>
+        <br>
+        <h6><div class="form-group">
+            <label for="Username" style="font-size:140%;padding-left: 40%;display: inline-block;width: 55%;">  Username :  </label>
+            <input type="text" placeholder="Username"  style="border-left-color: rgb(82, 198, 206); border-top-style: ridge ;width: 25%;padding: 8px;" >
+        </div><br>
+        <div class="form-group">
+            <label for="password" style="font-size:140%;padding-left: 40%;display: inline-block;width: 55%;">  Password :  </label>
+            <input type="password" placeholder="Password"  style="border-left-color: rgb(82, 198, 206); border-top-style: ridge ;width: 25%;padding: 8px;" >
+        </div></h6>
+        <button (click)="getval()" style="margin-top: 40px;margin-left: 550px;" routerLink="/dashboard">Login</button>
+        <h5>New User? Click to <a href="sign up" routerLink="/register"> Sign up</a></h5>
+    </div>
+    </div>
+</div> 
+</section>
+</div>
+       
+       

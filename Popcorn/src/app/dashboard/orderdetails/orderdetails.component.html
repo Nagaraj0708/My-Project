@@ -1,0 +1,42 @@
+<div class="order-confirmation">
+<div class="cart-overlay" [style.display]="isVisible ? 'block' : 'none'"(click)="onOverlayClick($event)"></div>
+<div class="cart-content" [style.display]="isVisible ? 'block' : 'none'" (click)="onContentClick($event)">
+  <h2>🎉Your order is placed successfully🎉</h2>
+  <h3>Summary of your order </h3>
+  
+  <div class="bill">
+    <table>
+      <thead>
+        <tr>
+          <th>PRODUCTS</th>
+          <th>QTY</th>
+          <th>PRICE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.products }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}₹</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Subtotal</td>
+          <td>{{ subtotal() }}₹</td>
+        </tr>
+        <tr>
+          <td colspan="2">GST (18%)</td>
+          <td>{{ calculateGST() }}₹</td>
+        </tr>
+        <tr>
+          <td colspan="2">Grand Total</td>
+          <td>{{ overallTotal() }}₹</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  
+  <p>Thank you.. Please visit again.!!</p>
+  <button class="close-button"(click)="returnHome()">Return Home</button>
+</div>

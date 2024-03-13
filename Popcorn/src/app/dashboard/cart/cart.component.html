@@ -1,0 +1,37 @@
+<div class="section">
+<div class="cart-overlay" [style.display]="isVisible ? 'block' : 'none'"(click)="onOverlayClick($event)"></div>
+<div class="cart-content" [style.display]="isVisible ? 'block' : 'none'" (click)="onContentClick($event)">
+    <header>HERE IS YOUR ODER DETAILS</header>
+    <br>
+    <thead>
+        <tr>
+            <th>PRODUCTS</th>
+            <th>QTY</th>   
+            <th>PRICE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of reference;">
+            <td>{{user.products}} </td>
+            <td>{{user.quantity}}</td>
+            <td>{{user.price}}₹</td>
+        </tr><br>
+        <tfoot>
+            <tr>
+              <td colspan="3">Subtotal</td>
+              <td>{{ subtotal() }}₹</td>
+            </tr>
+            <tr>
+              <td colspan="3">GST (18%)</td>
+              <td>{{ calculateGST() }}₹</td>
+            </tr>
+            <tr>
+              <td colspan="3">Grand Total</td>
+              <td>{{ OverallTotal() }}₹</td>
+            </tr>
+          </tfoot><br><br>
+          <button class="edit-btn" (click)="edit()">Edit</button>
+          <button class="place-order-btn" (click)="placeorder()">Place Order</button> 
+          <app-orderdetails *ngIf="isorderdetailsVisible" [cartItems]="reference" (close)="isorderdetailsVisible = false"></app-orderdetails>
+        </div>
+      </div>

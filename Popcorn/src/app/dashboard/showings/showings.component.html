@@ -1,0 +1,55 @@
+<div class="overall"><h5>
+<div class="header" style="font-style: oblique; background-position-y: center;"><h4> Varieties</h4>
+<div class="row-container">
+    <div class="item" style="margin-left: 7%;">Small</div>
+    <div class="item">Regular</div>
+    <div class="item"style="margin-right: 7%;">Large</div>
+</div>
+<div class="image-row">
+    <img style="height: 8%; width: 15%;" src="https://media.istockphoto.com/id/861873880/photo/big-box-full-of-popcorn-and-scattered-near-isolated-on-white.jpg?s=612x612&w=0&k=20&c=0qpJ8XahT06QmQ3DyzA7TfAEndV5qM5Ktj-OsPKBWKs=" alt="Small">
+    <img style="height: 20%; width: 15%;" src="https://media.istockphoto.com/id/1292920534/photo/popcorn-in-red-and-white-striped-cardboard-bucket.jpg?s=612x612&w=0&k=20&c=iqEmWRIL9Jqbiv5lwYTILYYY6X8cDOvfjk7tqEX_eQg=" alt="Regular">
+    <img style="height: 18%; width: 14%;" src="https://media.istockphoto.com/id/1431411398/photo/popcorn-bucket-with-red-strips-isolated-on-white.jpg?s=612x612&w=0&k=20&c=vc9u0GOj4-tSvwP_1BY1s302PTmAjzVacDQ2HZLUfEM=" alt="Large">
+</div>
+<div class="row-container">
+    <div class="item" style="margin-left: 7%;">80₹</div>
+    <div class="item">120₹</div>
+    <div class="item"style="margin-right: 7%;">150₹</div>
+</div>
+<div class="row-container">
+    <div class="item" style="margin-left: 7%;"><button (click)="VA()">-</button><button>{{new}}</button><button (click)="VA1()" >+</button></div>
+    <div class="item"><button (click)="VB()" >-</button><button>{{new1}}</button><button (click)="VB1()" >+</button></div>
+    <div class="item"style="margin-right: 7%;"><button (click)="VC()">-</button><button>{{new2}}</button><button (click)="VC1()" >+</button></div>
+</div></div><br><br>
+<div class="header1" style="font-style: oblique; background-position-y: center; padding-top: 4%;"> <h4>Toppings</h4>
+<div class="row-container">
+    <div class="item1" style="padding-top: 2%;">Cheese Powder</div>
+    <div class="item2" style="padding-top: 2%;">50mg</div>
+    <div class="item3" style="padding-top: 2%;">10₹</div>
+    <div class="item4" style="padding-top: 2%;"><button (click)="TA()">-</button><button>{{add}}</button><button (click)="TA1()" >+</button></div>
+</div>
+<div class="row-container">
+    <div class="item1">Garlic Powder</div>
+    <div class="item2">50mg</div>
+    <div class="item3">10₹</div>
+    <div class="item4"><button (click)="TB()">-</button><button>{{add1}}</button><button (click)="TB1()" >+</button></div>
+</div>
+<div class="row-container">
+    <div class="item1">Hot Spice Powder</div>
+    <div class="item2">50mg</div>
+    <div class="item3">10₹</div>
+    <div class="item4"><button (click)="TC()">-</button><button>{{add2}}</button><button (click)="TC1()" >+</button></div>
+</div>
+<div class="row-container">
+    <div class="item1">Butter</div>
+    <div class="item2">15ml</div>
+    <div class="item3">20₹</div>
+    <div class="item4"><button (click)="TD()">-</button><button>{{add3}}</button><button (click)="TD1()" >+</button></div>
+</div></div>
+<div>
+
+
+<button class="proceed-btn" (click)="togglecart()" [disabled]="reference.length === 0">Proceed to Cart <img style="height: 30px; width: 30px;" src="https://cdn-icons-png.freepik.com/256/891/891462.png?ga=GA1.1.315265697.1693331629&" alt=""><span class="badge" [hidden]="reference.length === 0" >{{ getTotalQuantity() }}</span></button>
+<app-cart *ngIf="iscartVisible" (close)="iscartVisible = false"></app-cart>
+</div>
+</h5>   
+</div>
