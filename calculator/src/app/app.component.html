@@ -1,0 +1,32 @@
+<body>
+  <div class="container">
+    <div class="screen_wrap">
+      <div class="screen_container">
+        <div class="history">{{ history }}</div>
+        <div class="screen">{{ data }}</div>
+      </div>
+    </div>
+
+    <div class="btn_wrap">
+      <button class="btn" (click)="clear()">C</button>
+      <button class="btn" (click)="delete()">DEL</button>
+      <button class="btn" (click)="Expression('%')">%</button>
+      <button class="btn" (click)="Expression('/')">/</button>
+      <button class="btn" (click)="Expression('7')">7</button>
+      <button class="btn" (click)="Expression('8')">8</button>
+      <button class="btn" (click)="Expression('9')">9</button>
+      <button class="btn" (click)="Expression('*')">*</button>
+      <button class="btn" (click)="Expression('4')">4</button>
+      <button class="btn" (click)="Expression('5')">5</button>
+      <button class="btn" (click)="Expression('6')">6</button>
+      <button class="btn" (click)="Expression('-')">-</button>
+      <button class="btn" (click)="Expression('1')">1</button>
+      <button class="btn" (click)="Expression('2')">2</button>
+      <button class="btn" (click)="Expression('3')">3</button>
+      <button class="btn" (click)="Expression('+')">+</button>
+      <button class="btn" (click)="Expression('.')">.</button>
+      <button class="btn" (click)="Expression('0')">0</button>
+      <button class="btn" (click)="calculate()">=</button>
+    </div>
+  </div>
+</body>
